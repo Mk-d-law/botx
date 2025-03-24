@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BotX - AI Automation</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: linear-gradient(135deg, #FF3333, #880000);
+            box-shadow: 0px 4px 10px rgba(255, 51, 51, 0.5);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: #FFD700;
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #111, #222);
+            box-shadow: 0px 4px 20px rgba(255, 51, 51, 0.4);
+        }
+        .hero h1 {
+            font-size: 50px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #FF3333, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #FF3333; }
+            to { text-shadow: 0 0 20px #FFD700; }
+        }
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: auto;
+            opacity: 0.8;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #fff;
+            background: #FF3333;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #880000;
+            transform: translateY(-3px);
+        }
+        .features {
+            padding: 80px 20px;
+            text-align: center;
+            background: #111;
+        }
+        .feature-box {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .feature {
+            width: 300px;
+            background: #222;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(255, 51, 51, 0.3);
+            transition: 0.3s;
+        }
+        .feature:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 51, 51, 0.6);
+        }
+        .feature i {
+            font-size: 40px;
+            color: #FF3333;
+            margin-bottom: 15px;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #880000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">BotX</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div class="hero">
+        <h1>AI-Powered Moderation & Automation</h1>
+        <p>Manage your Telegram groups with smart AI-driven bots for moderation, image filtering, summarization, and auto FAQ.</p>
+        <a href="{% url 'dashboard' %}" class="btn">Get Started</a>
+    </div>
+
+    <div class="features">
+        <h2>Why Choose BotX?</h2>
+        <div class="feature-box">
+            <div class="feature">
+                <i class="fas fa-cogs"></i>
+                <h3>Customizable Bots</h3>
+                <p>Create AI-powered bots tailored for your group’s needs.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-image"></i>
+                <h3>Image Moderation</h3>
+                <p>Filter and moderate images automatically using AI.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-comment-dots"></i>
+                <h3>Summarization</h3>
+                <p>Get AI-generated summaries of long conversations.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-robot"></i>
+                <h3>Auto FAQ</h3>
+                <p>Automate answers to common questions in your community.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2025 BotX - AI Moderation & Automation
+    </div>
+
+</body>
+</html>

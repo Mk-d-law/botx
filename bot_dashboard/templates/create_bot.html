@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Telegram Bot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(135deg, #FF3333, #FF3333);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        form {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 25px;
+            color: #333;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="file"] {
+            width: 100%;
+            padding: 12px 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            transition: border 0.3s;
+        }
+        input[type="text"]:focus,
+        input[type="file"]:focus {
+            border-color: #dac3c1;
+            outline: none;
+        }
+        button {
+            background-color: #FF3333;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #b88b87;
+            transform: translateY(-2px);
+        }
+        @media(max-width: 480px) {
+            form {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="{% url 'create_bot' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h2>Create Your Telegram Bot</h2>
+        <div>
+            <label for="api_key">API Key:</label>
+            <input type="text" id="api_key" name="api_key" placeholder="Enter your bot API key" required>
+        </div>
+        <div>
+            <label for="faq_pdf">Upload FAQ (PDF Only):</label>
+            <input type="file" id="faq_pdf" name="faq_pdf" accept=".pdf" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

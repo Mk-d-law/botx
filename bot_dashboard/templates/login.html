@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BotX Dashboard - Sign In</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Sign In Page -->
+    <div class="sign-in-page">
+        <div class="sign-in-container">
+            {% if messages %}
+                <div id="successNotification" class="success-notification">
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            
+            <h2>Sign In</h2>
+
+            <form method="post">
+                {% csrf_token %}
+                <div class="input-group">
+                    <i class="fas fa-envelope input-icon"></i>
+                    {{ form.username }}
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock input-icon"></i>
+                    {{ form.password }}
+                </div>
+                <button type="submit" class="signin-btn">Sign In</button>
+            </form>
+
+            <p class="form-footer">
+                Don't have an account? <a href="{% url 'signup' %}" class="switch-form">Sign Up</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

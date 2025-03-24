@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BotX Dashboard - Sign Up</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Sign Up Page -->
+    <div class="sign-up-page">
+        <div class="sign-up-container">
+            <h2>Create Account</h2>
+
+            <form method="post">
+                {% csrf_token %}
+                <div class="input-group">
+                    <i class="fas fa-user input-icon"></i>
+                    {{ form.username }}
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope input-icon"></i>
+                    {{ form.email }}
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock input-icon"></i>
+                    {{ form.password1 }}
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock input-icon"></i>
+                    {{ form.password2 }}
+                </div>
+
+                <button type="submit" class="signup-submit-btn">Sign Up</button>
+            </form>
+
+            <p class="form-footer">Already have an account? 
+                <a href="{% url 'login' %}" class="switch-form">Sign In</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

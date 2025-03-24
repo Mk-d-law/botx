@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BotX - AI-Powered Automation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: black;
+            color: white;
+        }
+        .section {
+            padding: 80px 10%;
+            text-align: center;
+        }
+        h1, h2 {
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle, rgba(255, 0, 0, 0.2), transparent);
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            text-shadow: 0 0 15px red;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin: 20px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary {
+            background: red;
+            color: black;
+            box-shadow: 0 0 10px red;
+        }
+        .btn-secondary {
+            background: black;
+            color: red;
+            border: 2px solid red;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px red;
+        }
+
+        /* Features Section */
+        .features {
+            background: rgba(20, 20, 20, 0.9);
+        }
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .feature-box {
+            background: black;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px red;
+            max-width: 300px;
+            transition: 0.3s;
+        }
+        .feature-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px red;
+        }
+        .feature-box i {
+            font-size: 3rem;
+            color: red;
+        }
+        .feature-box h3 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background: black;
+        }
+        .pricing h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .pricing-table {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .pricing-plan {
+            background: rgba(255, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px red;
+            max-width: 300px;
+            transition: 0.3s;
+        }
+        .pricing-plan:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px red;
+        }
+        .pricing-plan h3 {
+            font-size: 1.8rem;
+        }
+        .pricing-plan p {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+        .pricing-plan .price {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: rgba(20, 20, 20, 0.9);
+        }
+        .testimonial-box {
+            background: black;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px red;
+            max-width: 500px;
+            margin: auto;
+        }
+        .testimonial-box p {
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: black;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: auto;
+        }
+        .contact-form input, .contact-form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background: rgba(255, 0, 0, 0.1);
+            color: white;
+        }
+        .contact-form textarea {
+            resize: none;
+        }
+        .contact-form button {
+            padding: 10px;
+            border-radius: 5px;
+            background: red;
+            color: black;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>BotX</h1>
+        <p>The Future of AI-Powered Moderation</p>
+        <a href="#features" class="btn btn-primary">Learn More</a>
+        <a href="signup.html" class="btn btn-secondary">Get Started</a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features" id="features">
+        <h2>Why Choose BotX?</h2>
+        <div class="feature-grid">
+            <div class="feature-box">
+                <h3>AI Moderation</h3>
+                <p>Detect spam, hate speech, and automate moderation effortlessly.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Smart Analytics</h3>
+                <p>Track user behavior and gain insights into your community.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Cross-Platform</h3>
+                <p>Works on Telegram, Discord, WhatsApp, and more.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section pricing">
+        <h2>Choose Your Plan</h2>
+        <div class="pricing-table">
+            <div class="pricing-plan">
+                <h3>Free</h3>
+                <p>Basic Moderation</p>
+                <p class="price">$0/month</p>
+            </div>
+            <div class="pricing-plan">
+                <h3>Pro</h3>
+                <p>AI Moderation + Analytics</p>
+                <p class="price">$10/month</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+</body>
+</html>
