@@ -1,0 +1,181 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+
+.sidebar h2 {
+    color: #e50000;
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.sidebar ul li:hover {
+    background-color: #444;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+}
+
+/* Content Styles */
+.content {
+    margin-left: 270px;
+    padding: 20px;
+    width: 100%;
+}
+
+h1 {
+    color: #e50000;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    text-align: center;
+    width: 30%;
+    font-size: 18px;
+    color: #fff;
+}
+
+.card span {
+    font-weight: bold;
+    font-size: 24px;
+    color: #e50000;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+thead {
+    background-color: #e50000;
+}
+
+thead th {
+    color: #fff;
+}
+
+tbody tr:hover {
+    background-color: #444;
+    cursor: pointer;
+}
+
+/* Pagination Styles */
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #e50000;
+    cursor: pointer;
+}
+
+.bg-gray-500 {
+    background-color: #555;
+}
+
+.bg-red-600 {
+    background-color: #e50000;
+}
+
+/* Modal Styles */
+.create-bot-modal {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    display: none;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+.create-bot-modal input {
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+    margin-bottom: 20px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+}
+
+.create-bot-modal a {
+    background-color: #e50000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.create-bot-modal a:hover {
+    background-color: #c40000;
+}

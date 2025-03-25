@@ -1,7 +1,15 @@
 from django import forms
-from .models import BotSettings  # Ensure this model exists in bots/models.py
+from .models import GroupSettings
 
 class GroupSettingsForm(forms.ModelForm):
     class Meta:
-        model = BotSettings
-        fields = ['group_name', 'moderation_level', 'auto_delete_spam']
+        model = GroupSettings
+        fields = [
+            'group_name', 
+            'allow_links', 
+            'block_spam', 
+            'allow_promotions',
+            'detect_deepfake',
+            'detect_image_scam'
+        ]
+
