@@ -10,8 +10,8 @@ from telegram.ext import Application, MessageHandler, filters, CallbackContext
 nest_asyncio.apply()
 
 # Set your API keys
-GEMINI_API_KEY = "AIzaSyBYGjJVPY7dDSzKZjZRl5QtxdomjcpO3QE"  # Replace with your Gemini API key
-TOKEN = "7660243501:AAEt66nNWWxZ5rc7OoVEAtInUTHwbB2Wkzo"  # Replace with your Telegram bot token
+GEMINI_API_KEY = "xxxxx"  # Replace with your Gemini API key
+TOKEN = "yyyyy"  # Replace with your Telegram bot token
 
 # Initialize Gemini AI (Using Free Model)
 genai.configure(api_key=GEMINI_API_KEY)
